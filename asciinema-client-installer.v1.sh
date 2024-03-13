@@ -1,13 +1,14 @@
 #!/bin/bash
-# Script Name:  asciinema-installer.v1.sh
-# Beschreibung: Installiert die asciinema Software und konfiguriert die Bash-Umgebung
-# Aufruf:       ./asciinema-installer.v1.sh
+# Script Name:  asciinema-client-installer.v1.sh
+# Beschreibung: Installiert die asciinema Software Clientseitig und konfiguriert die Bash-Umgebung
+#               unterstützte Bash: /bin/bash & /bin/zsh
+# Aufruf:       ./asciinema-client-installer.v1.sh
 # Autor:        Patrick Asmus
 # Web:          https://www.media-techport.de
-# Git-Reposit.: -
-# Version:      1.0
-# Datum:        02.01.2024
-# Modifikation: Initial
+# Git-Reposit.: https://git.media-techport.de/scriptos/asciinema.git
+# Version:      1.0.1
+# Datum:        13.03.2024
+# Modifikation: Header aktualisiert + Filename geändert
 #####################################################
 
 ASCIINEMA_API_URL="https://asciinema.media-techport.de"
