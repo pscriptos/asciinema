@@ -1,0 +1,53 @@
+version: '3.3'
+
+services:
+
+  asciinema-app:
+    image: ghcr.io/asciinema/asciinema-server:20240203
+    container_name: asciinema-app
+    restart: always
+    networks:
+      dockernet:
+        ipv4_address: 172.16.0.49
+    ports:
+      - '80:4000'
+    environment:
+      - SECRET_KEY_BASE=%yoursecretkey%
+      - URL_HOST=asciinema.domain.com
+      - URL_SCHEME=https
+      - SMTP_HOST=mail.your-server.de
+      - SMTP_PORT=587
+      - SMTP_USERNAME=noreply@domain.com
+      - SMTP_PASSWORD=%yourpassword%
+      - SMTP_FROM_ADDRESS=noreplydomain.com
+      - SMTP_TLS=if_available
+      - SMTP_AUTH=if_available
+      - DATABASE_URL=postgresql://postgres@172.16.0.48/postgres
+      - UPLOAD_SIZE_LIMIT=50000000
+      - SIGN_UP_DISABLED=false
+    volumes:
+      - ./data:/var/opt/asciinema
+    depends_on:
+      asciinema-db:
+        condition: service_healthy
+
+  asciinema-db:
+    image: docker.io/library/postgres:14
+    container_name: asciinema-db
+    restart: always
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    networks:
+      dockernet:
+        ipv4_address: 172.16.0.48
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 2s
+      timeout: 5s
+      retries: 10
+
+networks:
+  dockernet:
+    external: true
