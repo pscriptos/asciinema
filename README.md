@@ -42,7 +42,7 @@ Das Script wird mit `bash asciinema-client-installer.v1.sh` ausgeführt und dann
     
 2.  **Erkennung der Shell-Konfigurationsdatei**: Es wird geprüft, ob eine `.zshrc`-Datei (für oh-my-zsh) im Root-Verzeichnis existiert. Falls ja, wird diese als Konfigurationsdatei (`CONFIG_FILE`) verwendet, ansonsten wird `.bashrc` verwendet.
     
-3.  **Konfiguration der Umgebungsvariablen**: Das Skript fügt der erkannten Konfigurationsdatei die Umgebungsvariable `ASCIINEMA_API_URL` hinzu, wobei die URL standardmäßig auf `https://asciinema.media-techport.de` gesetzt wird. Diese Einstellung ist spezifisch für eure API.
+3.  **Konfiguration der Umgebungsvariablen**: Das Skript fügt der erkannten Konfigurationsdatei die Umgebungsvariable `ASCIINEMA_API_URL` hinzu, wobei die URL standardmäßig auf `https://asciinema.techniverse.net` gesetzt wird. Diese Einstellung ist spezifisch für eure API.
     
 4.  **Informationen für den Benutzer**: Nach der Konfiguration zeigt das Skript eine Nachricht an, die den Benutzer auffordert, das Terminal neu zu starten, um die Änderungen zu übernehmen.
     

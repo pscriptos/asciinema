@@ -4,14 +4,14 @@
 #               unterstützte Bash: /bin/bash & /bin/zsh
 # Aufruf:       ./asciinema-client-installer.v1.sh
 # Autor:        Patrick Asmus
-# Web:          https://www.media-techport.de
-# Git-Reposit.: https://git.media-techport.de/scriptos/asciinema.git
-# Version:      1.0.1
-# Datum:        13.03.2024
-# Modifikation: Header aktualisiert + Filename geändert
+# Web:          https://www.techniverse.net
+# Git-Reposit.: https://git.techniverse.net/scriptos/asciinema.git
+# Version:      1.2
+# Datum:        31.03.2024
+# Modifikation: Umstellung auf neue Domain
 #####################################################
 
-ASCIINEMA_API_URL="https://asciinema.media-techport.de"
+ASCIINEMA_API_URL="https://asciinema.techniverse.net"
 
 # Software installieren
 sudo apt update && sudo apt install asciinema -y
