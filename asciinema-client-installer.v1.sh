@@ -6,12 +6,12 @@
 # Autor:        Patrick Asmus
 # Web:          https://www.techniverse.net
 # Git-Reposit.: https://git.techniverse.net/scriptos/asciinema.git
-# Version:      1.2
-# Datum:        31.03.2024
-# Modifikation: Umstellung auf neue Domain
+# Version:      1.2.1
+# Datum:        16.11.2024
+# Modifikation: Asciinema wird unter neuer Domain betrieben
 #####################################################
 
-ASCIINEMA_API_URL="https://asciinema.techniverse.net"
+ASCIINEMA_API_URL="https://asciinema.it-nerds.com"
 
 # Software installieren
 sudo apt update && sudo apt install asciinema -y
